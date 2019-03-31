@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'com.coderjks.camel'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    camelVersion = '3.0.0-M1'
+}
+
+dependencies {
+    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'
+
+//    compile group: 'org.apache.camel', name: 'camel-test', version: '2.13.0'
+    compile group: 'org.apache.camel', name: 'camel-core', version: camelVersion
+//    compile group: 'org.apache.camel', name: 'camel-stream', version: '2.13.0'
+//    compile group: 'org.apache.camel', name: 'camel-sql', version: '2.13.0'
+//    compile group: 'org.apache.camel', name: 'camel-spring', version: '2.13.0'
+//    compile group: 'org.apache.camel', name: 'camel-quartz2', version: '2.13.0'
+//    compile group: 'org.apache.camel', name: 'camel-activemq', version: '2.13.0'
+//    compile group: 'org.apache.camel', name: 'camel-jms', version: '2.13.0'
+    compile group: 'org.apache.camel', name: 'camel-jms', version: camelVersion
+    compile group: 'org.apache.camel', name: 'camel-telegram', version: camelVersion
+
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.17'
+}
